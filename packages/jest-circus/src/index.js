@@ -18,6 +18,8 @@ import type {
 } from 'types/Circus';
 import {dispatch} from './state';
 
+import {installEach} from 'jest-jasmine2/build/each';
+
 const describe = (blockName: BlockName, blockFn: BlockFn) =>
   _dispatchDescribe(blockFn, blockName);
 describe.only = (blockName: BlockName, blockFn: BlockFn) =>
@@ -59,6 +61,8 @@ test.skip = (testName: TestName, fn?: TestFn) =>
   dispatch({fn, mode: 'skip', name: 'add_test', testName});
 test.only = (testName: TestName, fn: TestFn) =>
   dispatch({fn, mode: 'only', name: 'add_test', testName});
+
+installEach(test, describe);
 
 module.exports = {
   afterAll,

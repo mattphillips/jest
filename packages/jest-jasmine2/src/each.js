@@ -13,6 +13,8 @@ import util from 'util';
 import chalk from 'chalk';
 import pretty from 'pretty-format';
 
+import type {BlockFn, TestFn} from 'types/Circus';
+
 type Table = Array<Array<any>>;
 
 const EXPECTED_COLOR = chalk.green;
@@ -25,6 +27,15 @@ export default (environment: Environment): void => {
   environment.global.describe.each = bindEach(environment.global.describe);
   environment.global.xdescribe.each = bindEach(environment.global.xdescribe);
   environment.global.fdescribe.each = bindEach(environment.global.fdescribe);
+};
+
+export const installEach = (test: TestFn, describe: BlockFn): void => {
+  test.each = bindEach(test);
+  test.only.each = bindEach(test.only);
+  test.skip.each = bindEach(test.skip);
+  describe.each = bindEach(describe);
+  describe.only.each = bindEach(describe.only);
+  describe.skip.each = bindEach(describe.skip);
 };
 
 const bindEach = (cb: Function) => (...args: any) => (
