@@ -69,7 +69,9 @@ async function runTestInternal(
   /* $FlowFixMe */
   const TestEnvironment = (require(testEnvironment): EnvironmentClass);
   /* $FlowFixMe */
-  const testFramework = (require(config.testRunner): TestFramework);
+  const testFramework = require('jest-circus/build/legacy_code_todo_rewrite/jest_adapter.js')
+    .default;
+
   /* $FlowFixMe */
   const Runtime = (require(config.moduleLoader || 'jest-runtime'): Class<
     RuntimeClass,
