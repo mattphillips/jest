@@ -87,10 +87,16 @@ const buildTable = (
     );
 
 const interpolate = (title: string, data: any) =>
-  Object.keys(data).reduce(
-    (acc, key) => acc.replace('$' + key, data[key]),
-    title,
-  );
+  Object.keys(data).reduce((acc, key) => {
+    const prettyData = pretty(data[key], {maxDepth: 1, min: true});
+    if (prettyData.length > 50) {
+      return acc.replace(
+        '$' + key,
+        pretty(data[key], {maxDepth: 0, min: true}),
+      );
+    }
+    return acc.replace('$' + key, prettyData);
+  }, title);
 
 const applyObjectParams = (obj: any, test: Function) => {
   if (test.length > 1) return done => test(obj, done);

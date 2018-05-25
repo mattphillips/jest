@@ -59,9 +59,9 @@ exports[`shows the correct errors in stderr when failing tests 1`] = `
     ✕ fails
   array table describe fails on all rows expected c == d
     ✕ fails
-  template table describe fails on all rows expected a == b
+  template table describe fails on all rows expected \\"a\\" == \\"b\\"
     ✕ fails
-  template table describe fails on all rows expected c == d
+  template table describe fails on all rows expected \\"c\\" == \\"d\\"
     ✕ fails
 
   ● array table fails on one row: expected true == false
@@ -200,7 +200,7 @@ exports[`shows the correct errors in stderr when failing tests 1`] = `
 
       at __tests__/failure.test.js:49:18
 
-  ● template table describe fails on all rows expected a == b › fails
+  ● template table describe fails on all rows expected \\"a\\" == \\"b\\" › fails
 
     expect(received).toBe(expected) // Object.is equality
 
@@ -217,7 +217,7 @@ exports[`shows the correct errors in stderr when failing tests 1`] = `
 
       at __tests__/failure.test.js:61:20
 
-  ● template table describe fails on all rows expected c == d › fails
+  ● template table describe fails on all rows expected \\"c\\" == \\"d\\" › fails
 
     expect(received).toBe(expected) // Object.is equality
 
@@ -233,6 +233,27 @@ exports[`shows the correct errors in stderr when failing tests 1`] = `
       64 | );
 
       at __tests__/failure.test.js:61:20
+
+"
+`;
+
+exports[`works with passing tests 1`] = `
+"PASS __tests__/success.test.js
+  ✓ passes one row expected true == true
+  ✓ passes one row expected true == true
+  ✓ passes all rows expected true == true
+  ✓ passes all rows expected true == true
+  ✓ pretty prints objects {\\"hello\\": [Object]} equals {\\"hello\\": [Object]}
+  ✓ pretty prints objects [Object] equals [Object]
+  ✓ passes one row expected true == true
+  ✓ passes one row expected true == true
+  ✓ passes all rows expected true == true
+  ✓ passes all rows expected true == true
+  passes all rows expected true == true
+    ✓ passes
+    ✓ passes
+    ✓ passes
+    ✓ passes
 
 "
 `;

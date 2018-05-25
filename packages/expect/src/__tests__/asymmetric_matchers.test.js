@@ -22,20 +22,19 @@ const {
   stringNotMatching,
 } = require('../asymmetric_matchers');
 
-test('Any.asymmetricMatch()', () => {
-  const Thing = function() {};
+const Thing = function() {};
 
-  [
-    any(String).asymmetricMatch('jest'),
-    any(Number).asymmetricMatch(1),
-    any(Function).asymmetricMatch(() => {}),
-    any(Boolean).asymmetricMatch(true),
-    any(Object).asymmetricMatch({}),
-    any(Array).asymmetricMatch([]),
-    any(Thing).asymmetricMatch(new Thing()),
-  ].forEach(test => {
-    jestExpect(test).toBe(true);
-  });
+test.each`
+  given       | expected
+  ${String}   | ${'jest'}
+  ${Number}   | ${1}
+  ${Function} | ${() => {}}
+  ${Boolean}  | ${true}
+  ${Object}   | ${{}}
+  ${Array}    | ${[]}
+  ${Thing}    | ${new Thing()}
+`('Any.asymmetricMatch(): $given', ({given, expected}) => {
+  jestExpect(any(given).asymmetricMatch(expected)).toBe(true);
 });
 
 test('Any.toAsymmetricMatcher()', () => {

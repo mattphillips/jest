@@ -30,6 +30,22 @@ describe.each([[true, true], [true, true]])(
 
 it.each`
   left    | right
+  ${{hello: {world: 'baz'}}} | ${{hello: {world: 'baz'}}}
+  ${{
+    dsjlfdskjlfsdkjlskjfljdskljflksdjlkfjsdkljflksddjdlkjfljsdlkjflksdklfjdsjsfdkljl: {
+      world: 'baz',
+    },
+  }} | ${{
+  dsjlfdskjlfsdkjlskjfljdskljflksdjlkfjsdkljflksddjdlkjfljsdlkjflksdklfjdsjsfdkljl: {
+    world: 'baz',
+  },
+}}
+`('pretty prints objects $left equals $right', ({left, right}) => {
+  expect(left).toEqual(right);
+});
+
+it.each`
+  left    | right
   ${true} | ${true}
   ${true} | ${true}
 `('passes one row expected $left == $right', ({left, right}) => {

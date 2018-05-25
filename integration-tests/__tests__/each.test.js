@@ -20,6 +20,11 @@ SkipOnWindows.suite();
 test('works with passing tests', () => {
   const result = runJest(dir, ['success.test.js']);
   expect(result.status).toBe(0);
+  const output = extractSummary(result.stderr)
+    .rest.split('\n')
+    .map(line => line.trimRight())
+    .join('\n');
+  expect(output).toMatchSnapshot();
 });
 
 test('shows error message when not enough arguments are supplied to tests', () => {
