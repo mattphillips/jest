@@ -48,7 +48,14 @@ test('shows only the tests with .only as being ran', () => {
 
 test('shows only the tests without .skip as being ran', () => {
   const result = runJest(dir, ['each-skip.test.js']);
-  expect(result.status).toBe(0);
   const {rest} = extractSummary(result.stderr);
   expect(rest).toMatchSnapshot();
+  expect(result.status).toBe(0);
+});
+
+test('runs only the describe.only.each tests', () => {
+  const result = runJest(dir, ['describe-only.test.js']);
+  const {rest} = extractSummary(result.stderr);
+  expect(rest).toMatchSnapshot();
+  expect(result.status).toBe(0);
 });
