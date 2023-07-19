@@ -2300,13 +2300,13 @@ __metadata:
   linkType: hard
 
 "@docusaurus/remark-plugin-npm2yarn@npm:^2.0.0":
-  version: 2.1.0
-  resolution: "@docusaurus/remark-plugin-npm2yarn@npm:2.1.0"
+  version: 2.4.1
+  resolution: "@docusaurus/remark-plugin-npm2yarn@npm:2.4.1"
   dependencies:
-    npm-to-yarn: ^1.0.1
-    tslib: ^2.4.0
+    npm-to-yarn: ^2.0.0
+    tslib: ^2.4.1
     unist-util-visit: ^2.0.3
-  checksum: eac6a9a6164f812cf8a5d6bb8f8d3807e0b2d203d66ca9615cffae0c7f819b61e8295d653d77d0deac29371c1c7ee4e45209c161ff1bdb8d2de2d523abc212d7
+  checksum: ec82f121b2627165dfdac1ac265f590e62e6528580a619b56fe9a1e13e1ad84cb3f1231dfa8b0a0523030ae009fdb31b5a378b5d1c4d582da32e1302eefa2704
   languageName: node
   linkType: hard
 
@@ -15348,10 +15348,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"npm-to-yarn@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "npm-to-yarn@npm:1.0.1"
-  checksum: b34958ddfc7a5e4ce3012f1bdf60d448c2a5027e10b733aad0462fbd0de0354b8cd27abde8b36691f9fc970660f48bbec86516ec4e07c36be63375ee9e1d37d9
+"npm-to-yarn@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "npm-to-yarn@npm:2.0.0"
+  checksum: 9da0e88edf00843cdc37481c89e64b2bc4a3468919221f39b57856b04913e55d59fd91004f6e8a85013b3d1eac0c884f60d81a2504a33e48d785eaae8cb484ab
   languageName: node
   linkType: hard
 
@@ -19876,6 +19876,13 @@ __metadata:
   version: 2.4.0
   resolution: "tslib@npm:2.4.0"
   checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.4.1":
+  version: 2.6.0
+  resolution: "tslib@npm:2.6.0"
+  checksum: c01066038f950016a18106ddeca4649b4d76caa76ec5a31e2a26e10586a59fceb4ee45e96719bf6c715648e7c14085a81fee5c62f7e9ebee68e77a5396e5538f
   languageName: node
   linkType: hard
 
