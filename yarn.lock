@@ -182,15 +182,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/common@npm:^12.0.0":
-  version: 12.2.16
-  resolution: "@angular/common@npm:12.2.16"
+"@angular/common@npm:^17.3.6":
+  version: 17.3.6
+  resolution: "@angular/common@npm:17.3.6"
   dependencies:
-    tslib: ^2.2.0
+    tslib: ^2.3.0
   peerDependencies:
-    "@angular/core": 12.2.16
-    rxjs: ^6.5.3 || ^7.0.0
-  checksum: 44871556ebe18ee35a8dc800e95ba30109afe1c71abcbe374b942674d392bc1a6d27a7ffda09f233018b7c0b9f1ae4bd4fc9edc579df6dc04d41fd40358c9d77
+    "@angular/core": 17.3.6
+    rxjs: ^6.5.3 || ^7.4.0
+  checksum: 722e32193fe8e4f54feb8df96559f078915276bc8fec48880178596dde32c0efd09c6bbee5b9ef51abc89427860c29518d553709cfe04880f7d7438597c2dd5f
   languageName: node
   linkType: hard
 
@@ -5581,7 +5581,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "angular@workspace:examples/angular"
   dependencies:
-    "@angular/common": ^12.0.0
+    "@angular/common": ^17.3.6
     "@angular/compiler": ^12.0.0
     "@angular/core": ^12.0.0
     "@angular/forms": ^12.0.0
