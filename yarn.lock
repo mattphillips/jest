@@ -229,17 +229,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@angular/platform-browser-dynamic@npm:^12.0.0":
-  version: 12.2.16
-  resolution: "@angular/platform-browser-dynamic@npm:12.2.16"
+"@angular/platform-browser-dynamic@npm:^18.1.0":
+  version: 18.1.0
+  resolution: "@angular/platform-browser-dynamic@npm:18.1.0"
   dependencies:
-    tslib: ^2.2.0
+    tslib: ^2.3.0
   peerDependencies:
-    "@angular/common": 12.2.16
-    "@angular/compiler": 12.2.16
-    "@angular/core": 12.2.16
-    "@angular/platform-browser": 12.2.16
-  checksum: 88a7e6316c85c2aa120bf1cd477df1bac47d1e2fdb7484530c519c5c910e37ecf3cad724d34defa14522cda80a581a0ac1eb8fda0f1527b48ab8a5bc3fa17f9c
+    "@angular/common": 18.1.0
+    "@angular/compiler": 18.1.0
+    "@angular/core": 18.1.0
+    "@angular/platform-browser": 18.1.0
+  checksum: eba679f3d36d27d828da162f3317f599830db3048f93528635ce8891ec9a491c94cdf14d2f0f05bf93f7780b8ea3258735a0ba63ed94bee816add128deb56e7d
   languageName: node
   linkType: hard
 
@@ -5586,7 +5586,7 @@ __metadata:
     "@angular/core": ^12.0.0
     "@angular/forms": ^12.0.0
     "@angular/platform-browser": ^12.0.0
-    "@angular/platform-browser-dynamic": ^12.0.0
+    "@angular/platform-browser-dynamic": ^18.1.0
     "@babel/core": ^7.11.6
     "@babel/plugin-proposal-decorators": "*"
     "@babel/preset-env": ^7.1.0
